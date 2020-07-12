@@ -1,0 +1,21 @@
+.icon {
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-image: url(sprite.svg);
+}
+.icon-envelope {
+  width: 28px;
+  height: 28px;
+  background-position: 0 0;
+}
+.icon-instagram {
+  width: 24px;
+  height: 28px;
+  background-position: -44px 0;
+}
+.icon-git-square {
+  width: 24px;
+  height: 28px;
+  background-position: -88px 0;
+}
+
