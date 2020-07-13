@@ -4,6 +4,7 @@
     box-sizing: border-box;
     font-family: sans-serif;
 }
+/* Header Section */
 .header{
     width: 100%;
     background-color: #eee;
@@ -39,6 +40,33 @@
     cursor: pointer;
 }
 
+
+/* Header content */
+.header__content{
+    display: flex;
+}
+.header__imgbox{
+    width: 50%;
+    background-color: #000;
+}
+.header__img{
+   width: 100%;
+   display: block;
+   opacity: 0.7;
+}
+.header__details{
+    width: 50%;
+    background-color: #fff;
+    padding: 1rem 3rem;
+}
+.header__detail{
+   font-size: 1.2rem;
+   line-height: 1.5;
+   padding: .5rem 0;
+}
+
+
+/* Naviggation media query for small screen */
 @media only screen and (max-width:500px){
     .nav{
         display: none;
