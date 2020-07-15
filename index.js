@@ -4,6 +4,32 @@ function showMenu(){
     document.querySelector('.nav').style.display="block";
 }
 
+// Countdown Section
+function updateOfferTime(){
+//   select ids
+    const days = document.getElementById('days');
+    const hours = document.getElementById('hours');
+    const min = document.getElementById('mint');
+    const sec = document.getElementById('sec');
+
+// get today Date,hour,minutes and seconds
+    const date = new Date();
+    const todayDate = date.getDate();
+    const todayHours = date.getHours();
+    const todayMinutes = date.getMinutes();
+    const todaySeconds = date.getSeconds();
+
+/*update on UI
+   Offer date is 5 Aug 2020*/
+      days.innerHTML=35-todayDate;
+      hours.innerHTML=24-todayHours;
+      min.innerHTML=60-todayMinutes;
+      sec.innerHTML=60-todaySeconds;
+
+}
+setInterval(updateOfferTime,1000);
+
+
 
 // jquery slider slick
 
@@ -20,13 +46,6 @@ $('.testimonial__content').slick({
 $(document).ready(function () {
     $('.notshow').removeClass('notshow');
 });
-
-
-
-
-
-
-
 
 
 
@@ -69,7 +88,7 @@ $(document).ready(function () {
 
 // // window.addEventListener('scroll',handleScroll);
 // // function handleScroll(){
-// //     // setInterval(callback, 100000);
+// //     // setInterval(callback, 1000);
 // //     console.log("scrollll");
 // // }
 

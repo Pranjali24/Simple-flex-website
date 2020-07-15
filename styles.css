@@ -117,6 +117,40 @@
   padding: .2rem 1.1rem 1.5rem;
   line-height: 1.5;
 }
+/* Countdown Section */
+.countdown{
+  background-color: #ffdecf;
+  padding: 2rem 4rem;
+  text-align: center;
+}
+.countdown__heading{
+   margin-bottom: 2rem;   
+   font-size: 2.5rem;
+   color: #333;
+}
+.countdown__content{
+   display: flex;
+   justify-content: space-evenly;
+   padding: 2rem 3rem;
+}
+.count__box{
+  width: 15%;
+  padding: 1.5rem;
+  border-radius: 4px;
+  background-color: teal;
+}
+.count__title{
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #dfd3c3;
+}
+.count__number{
+    font-size: 4rem;
+    color: #eee;
+}
+
+
+
 /* Naviggation media query for small screen */
 @media only screen and (max-width:500px){
     .nav{
