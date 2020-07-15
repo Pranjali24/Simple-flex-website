@@ -3,8 +3,38 @@ mbtn.addEventListener('click',showMenu);
 function showMenu(){
     document.querySelector('.nav').style.display="block";
 }
+/* Random Quotes */
+var quotes=[
+    "Everything is easy if your are crazy Nothing will be easy if you are lazy",
+    "Life is really generous to those who pursue their personal legend",
+    "Change your life today. Don’t gamble on the future, act now, without delay",
+    "The only person you are destined to become is the person you decide to be",
+    "No one is in control of your happiness but you; therefore, you have the power to change anything about yourself or your life that you want to change",
+    "Don’t settle. Don’t finish crappy books. If you don’t like the menu, leave the restaurant. If you’re not on the right path, get off it",
+    "You Had the power All Along , My DEAR",
+    "Your limitation—it's only your imagination",
+    "Push yourself, because no one else is going to do it for you",
+    "Success doesn’t just find you. You have to go out and get it"
 
-// Countdown Section
+];
+// Generate random number based on array length
+function randomNumberGenerator(){
+    let randomNumber = Math.floor(Math.random() * (quotes.length));
+    return randomNumber;
+}
+// Show quote on web 
+function randomQuoteGenerator(){
+    let getNumber=randomNumberGenerator();
+    document.querySelector('.quote').innerHTML=quotes[getNumber];
+}
+randomQuoteGenerator();  //Calling function
+
+
+
+
+
+
+/*Countdown Section*/
 function updateOfferTime(){
 //   select ids
     const days = document.getElementById('days');
@@ -31,7 +61,7 @@ setInterval(updateOfferTime,1000);
 
 
 
-// jquery slider slick
+/*jquery slider slick*/
 
 $('.testimonial__content').slick({
     dots: true,
