@@ -168,9 +168,7 @@
 
 /* Naviggation media query for small screen */
 @media only screen and (max-width:500px){
-    .nav{
-        display: none;
-    }
+    
     .list{
        flex-wrap: wrap;
         

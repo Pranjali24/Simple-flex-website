@@ -1,8 +1,22 @@
-const mbtn=document.querySelector('.mbtn');
-mbtn.addEventListener('click',showMenu);
-function showMenu(){
-    document.querySelector('.nav').style.display="block";
-}
+// Show Nav bar but not hide
+// const mbtn=document.querySelector('.mbtn');
+// mbtn.addEventListener('click',showMenu);
+// function showMenu(){
+//     document.querySelector('.nav').style.display="block";
+// }
+
+
+/* Toggle on Nav slider */
+$('.mbtn').click(
+    function(){
+        console.log("Clicked");
+        $('.nav').slideToggle();
+    }
+)
+
+
+
+
 /* Random Quotes */
 var quotes=[
     "Everything is easy if your are crazy Nothing will be easy if you are lazy",
@@ -28,10 +42,6 @@ function randomQuoteGenerator(){
     document.querySelector('.quote').innerHTML=quotes[getNumber];
 }
 randomQuoteGenerator();  //Calling function
-
-
-
-
 
 
 /*Countdown Section*/
@@ -76,6 +86,10 @@ $('.testimonial__content').slick({
 $(document).ready(function () {
     $('.notshow').removeClass('notshow');
 });
+
+
+
+
 
 
 
