@@ -2,20 +2,17 @@
 // const mbtn=document.querySelector('.mbtn');
 // mbtn.addEventListener('click',showMenu);
 // function showMenu(){
-//     document.querySelector('.nav').style.display="block";
+//     // document.querySelector('.nav').style.display="block";
+//     document.querySelector('.nav').classList.toggle('notshow');
 // }
 
 
 /* Toggle on Nav slider */
 $('.mbtn').click(
     function(){
-        console.log("Clicked");
         $('.nav').slideToggle();
     }
-)
-
-
-
+);
 
 /* Random Quotes */
 var quotes=[
@@ -101,11 +98,6 @@ $(document).ready(function () {
 
 
 
-
-
-
-
-
 // // Slider in testimonial 
 // const testimonials = document.querySelectorAll('.testimonial');
 // const testimonial_content=document.querySelector('.testimonial__content');
@@ -135,36 +127,3 @@ $(document).ready(function () {
 // //     // setInterval(callback, 1000);
 // //     console.log("scrollll");
 // // }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
