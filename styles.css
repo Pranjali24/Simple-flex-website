@@ -182,26 +182,41 @@
 }
 .test__content{
    padding: 2rem 4rem;
-   line-height: 1.5;
 }
 .test__question{
   font-size: 1.5rem;
+  line-height: 2;
 }
 input{
     padding-left: 1rem;
 }
 .test__option{
-  font-size: 1rem;
+  font-size: .9rem;
+  line-height: 2;
   display: block;
   text-transform: capitalize;
 }
 .test__answer{
   font-weight: 700;
   padding: 1rem 0;
-  display: block;
+  display: none;
 }
 .answer{
     color: green;
+}
+.btn{
+  border: none;
+  font-size: 1rem;
+  margin: .5rem 0;
+  background-color: indianred;
+  color: #fff;
+  border-radius: 4px;
+  padding:.4rem ;
+  outline: none;
+}
+.btn:hover{
+  background-color: rgb(221, 100, 100);
+  cursor: pointer;
 }
 
 /* Naviggation media query for small screen */
