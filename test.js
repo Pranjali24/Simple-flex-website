@@ -16,7 +16,7 @@ var q2 = new Questions("How can you get the type of arguments passed to a functi
 
 var q3 = new Questions("Which built-in method returns the calling string value converted to lower case?",
   ["toLowerCase()", "toLower()", "changeCase(case).", "None of the above."],
-  "using typeof operator");
+  "toLowerCase()");
 
 var questionArray=[q1,q2,q3];
 
@@ -26,12 +26,13 @@ function displayQuestion() {
   return questionArray.map((que,index) => {
     return `<ul class="test__question">${index+1}. ${que.question}
            ${displayOptions(que).join('')}
-    <button class="btn">Check Answer</button>
-    <li class="test__option"><p class="test__answer">
+    <button class="btn" data-id=${index}>Check Answer</button>
+    <li class="test__option"><p class="test__answer" data-show=${index}>
       <span class="answer">Answer : </span> ${que.answer}</p>
     </li> </ul>`;
   });
 }
+
 
 // display options 
 function displayOptions(que) {
@@ -46,20 +47,30 @@ test_content.insertAdjacentHTML('afterbegin', `${displayQuestion().join('')}`);
 
 
 /*********Checking Section*******/
-
+// Show Anser on button click
 const buttons=document.querySelectorAll('.btn');
-buttons.forEach(button=>button.addEventListener('click',displayAnswer));
-function displayAnswer(){
-  console.log(this);
-  document.querySelector('.test__answer').style.display='block';
-}
+const getAnswer = document.querySelectorAll('.test__answer');
+buttons.forEach(button=>button.addEventListener('click',matchAnswer));
 
+function matchAnswer(){
+  const buttonId = this.dataset.id;
+  let answerId;
 
-const question=document.querySelectorAll('.test__question');
-const options = document.querySelectorAll('.test__option');
-options.forEach(option=>option.addEventListener('click',handleClick));
-console.log(question);
-function handleClick(){
-  console.log(this);
+  getAnswer.forEach(answer=>{
+    answerId = answer.getAttribute('data-show');
+    if(buttonId===answerId){
+        showAnswer(answer);
+        setTimeout(() => {
+          hideAnswer(answer)
+        }, 10000);
+    }
+  });
+
+  function showAnswer(answer){
+    answer.style.display = 'block'
+ }
+ function hideAnswer(answer)  {
+   answer.style.display='none';
+ }
 }
 
