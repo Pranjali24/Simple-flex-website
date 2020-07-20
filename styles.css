@@ -194,7 +194,18 @@ input{
   font-size: .9rem;
   line-height: 2;
   display: block;
-  text-transform: capitalize;
+  /* text-transform: capitalize; */
+}
+.option__check{
+  font-size: 1.2rem;
+  background-color: green;
+  padding: .2rem .4rem;
+  border-radius: 50px;
+  color: #fff;
+  margin-left: .5rem;
+}
+.option__check--red{
+  background-color: red;
 }
 .test__answer{
   font-weight: 700;
