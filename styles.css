@@ -196,6 +196,9 @@ input{
   display: block;
   /* text-transform: capitalize; */
 }
+.test__option input{
+  margin-right: .5rem;
+}
 .option__check{
   font-size: 1.2rem;
   background-color: green;

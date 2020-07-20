@@ -1,25 +1,29 @@
-function Questions(question,options,answer){
-  this.question=question;
-  this.options=options;
-  this.answer=answer;
-}
+import questionArray from './questions.js';
 
-var q1 = new Questions("Which of the following is correct about features of JavaScript?", 
-  ["JavaScript is a lightweight, interpreted programming language.",
-   "JavaScript is designed for creating network-centric applications.",
-   "JavaScript is complementary to and integrated with Java.", 
-   "All of the above."],
-      "All of the above.");
-var q2 = new Questions("How can you get the type of arguments passed to a function?", 
-  ["using typeof operator", "using getType function", "Both of the above.","None of the above."], 
-          "using typeof operator");
+console.log(questionArray);
+// function Questions(question,options,answer){
+//   this.question=question;
+//   this.options=options;
+//   this.answer=answer;
+// }
 
-var q3 = new Questions("Which built-in method returns the calling string value converted to lower case?",
-  ["toLowerCase()", "toLower()", "changeCase(case).", "None of the above."],
-  "toLowerCase()");
 
-var questionArray=[q1,q2,q3];
+// var q1 = new Questions("Which of the following is correct about features of JavaScript?", 
+//   ["JavaScript is a lightweight, interpreted programming language.",
+//    "JavaScript is designed for creating network-centric applications.",
+//    "JavaScript is complementary to and integrated with Java.", 
+//    "All of the above."],
+//       "All of the above.");
+// var q2 = new Questions("How can you get the type of arguments passed to a function?", 
+//   ["using typeof operator", "using getType function", "Both of the above.","None of the above."], 
+//           "using typeof operator");
 
+// var q3 = new Questions("Which built-in method returns the calling string value converted to lower case?",
+//   ["toLowerCase()", "toLower()", "changeCase(case).", "None of the above."],
+//   "toLowerCase()");
+
+// var questionArray=[q1,q2,q3];
+// console.log(questionArray);
 /**************** Render on WebPage ************* */
 // display questions
 function displayQuestion() {
@@ -37,6 +41,7 @@ function displayQuestion() {
 // display options 
 function displayOptions(que) {
   return que.options.map(option => {
+    console.log(option);
     return `<li class="test__option"><input type="radio" name="option">${option}</li>`;
   });
 }
@@ -80,7 +85,7 @@ const options=document.querySelectorAll('.test__option');
 options.forEach(option=>option.addEventListener('click',optionClick));
 function optionClick(){
   let selectOption=this.innerText;
-  
+
   var check= questionArray.some(que=>{
       if(que.answer===selectOption){
         return true;
