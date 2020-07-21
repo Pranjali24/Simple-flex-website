@@ -1,5 +1,12 @@
 var questions=[
     {
+        question: "What is the HTML tag under which one can write the JavaScript code?",
+        options: ["&lt;javscript&gt;", "&lt;scripted&gt;", "&lt;script&gt;", "&lt;js&gt;"],
+        answer: "&lt;script&gt;"
+    },
+    
+    {
+        
         question:"Which of the following is correct about features of JavaScript?",
         options: ["JavaScript is a lightweight, interpreted programming language.",
             "JavaScript is designed for creating network-centric applications.",
