@@ -60,8 +60,9 @@ function matchAnswer(){
 const options=document.querySelectorAll('.test__option');
 options.forEach(option=>option.addEventListener('click',optionClick));
 function optionClick(){
-    let selectOption=this.innerText;
-  
+//  Check option only one time 
+  if(this.childNodes.length==2){
+    let selectOption = this.innerText;
     var check = questionArray.some(que => {
       if (que.answer === selectOption) {
         return true;
@@ -70,11 +71,12 @@ function optionClick(){
     // Add symbol right or wrong
     if (check === true) {
       this.insertAdjacentHTML('beforeend', '<span class="option__check">&check;</span>')
-      console.log(this);
     }
     else {
       this.insertAdjacentHTML('beforeend', '<span class="option__check option__check--red">&cross;</span>')
     }
 
+  }
+   
   }
 
