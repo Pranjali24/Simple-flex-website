@@ -6,7 +6,6 @@ var questions=[
     },
     
     {
-        
         question:"Which of the following is correct about features of JavaScript?",
         options: ["JavaScript is a lightweight, interpreted programming language.",
             "JavaScript is designed for creating network-centric applications.",

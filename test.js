@@ -62,9 +62,9 @@ options.forEach(option=>option.addEventListener('click',optionClick));
 function optionClick(){
 //  Check option only one time 
   if(this.childNodes.length==2){
-    let selectOption = this.innerText;
+    let selectOption = this.innerText.replace(/>/g, "&gt;").replace(/</g, "&lt;");
     var check = questionArray.some(que => {
-      if (que.answer === selectOption) {
+       if (que.answer === selectOption) {
         return true;
       }
     });
