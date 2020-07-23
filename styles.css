@@ -232,7 +232,44 @@ input{
   background-color: rgb(221, 100, 100);
   cursor: pointer;
 }
+/* Price card section */
 
+.prices{
+  padding: 2rem 3rem;
+  background-color: #eeecda;
+}
+.price__content{
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 3rem;
+}
+.price__card{
+  width: 25%;
+  padding: 1rem 2rem;
+  background-color: #006a71;
+  color: #fff;
+  transition: all .5s;
+}
+.price__heading{
+  width: 50%;
+  margin-left: -2.5rem;
+  padding: .5rem;
+  text-align: center;
+  border-radius: 25% 2%;
+  font-size: 1.5rem;
+  background-color: rgba(255, 68, 0, 0.795);
+  transform: rotate(-25deg);
+}
+.product__detail{
+  margin-top: 2.5rem;
+  padding:0 1rem;
+}
+.product__point{
+  line-height: 2;
+}
+.price__card:hover{
+  transform: rotateY(30deg);
+}
 /* Naviggation media query for small screen */
 @media only screen and (max-width:500px){
     .list{
